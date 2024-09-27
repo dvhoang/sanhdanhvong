@@ -4,8 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HALL OF FAME</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @keyframes blink {
+            50% {
+                opacity: 0.0;
+            }
+        }
+        .blink {
+            animation: blink 0.1s step-start 0s infinite;
+        }
+        .rotate{
+            animation: mymove 0.5s linear infinite;
+        }
+
+        @keyframes mymove {
+            100% {transform: rotate(360deg);}
+        }
+        
+        .animate-charcter{
+            text-transform: uppercase;
+            background-image: linear-gradient(
+                -225deg,
+                #231557 0%,
+                #44107a 29%,
+                #ff1361 67%,
+                #fff800 100%
+            );
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            text-fill-color: transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textclip 2s linear infinite;
+            display: inline-block;
+            font-size: 40px;
+        }
+
+        @keyframes textclip {
+            to {
+                background-position: 200% center;
+            }
+        }
+    </style>
 </head>
 <body style="background-color: blue;">
+    <div class="pyro"><div class="before"></div><div class="after"></div></div>
     <div style="left: 50%; text-align: center;">
         <h1 style="color: aliceblue;">SẢNH DANH VỌNG</h1>
         
@@ -22,15 +69,15 @@
             <tbody>
                 <tr>
                     <td>
-                        <img style="border-radius: 100%;" src="https://s120-ava-talk.zadn.vn/4/2/e/0/6/120/66ceda14b13e0837f3be59adc300dca8.jpg" alt="">
+                        <img class="rotate" style="border-radius: 100%;" src="https://s120-ava-talk.zadn.vn/4/2/e/0/6/120/66ceda14b13e0837f3be59adc300dca8.jpg" alt="">
                     </td>
                     
                     <td>
-                        <h1 style="color: aliceblue;">PHAN LUÂN</h1>
+                        <h1 class="animate-charcter" style="color: aliceblue;">PHAN LUÂN</h1>
                     </td>
     
                     <td>
-                        <h1 style="color: aliceblue;">I</h1>
+                        <h1 class="blink" style="color: aliceblue;">I</h1>
                     </td>
                 </tr>
     
@@ -91,8 +138,8 @@
                 </tr>
             </tbody>
         </table>
-            
     </div>
+    <div class="pyro"><div class="before"></div><div class="after"></div></div>
     
 </body>
 </html>
